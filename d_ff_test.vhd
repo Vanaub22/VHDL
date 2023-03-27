@@ -2,7 +2,6 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 ENTITY d_ff_test IS
 END d_ff_test;
- 
 ARCHITECTURE behavior OF d_ff_test IS  
     COMPONENT d_ff_rtl
     PORT(
@@ -19,7 +18,6 @@ ARCHITECTURE behavior OF d_ff_test IS
    signal q : std_logic;
    signal qp : std_logic;
    constant clk_period : time := 2 ps;
- 
 BEGIN
    uut: d_ff_rtl PORT MAP (
           d => d,
@@ -28,8 +26,6 @@ BEGIN
           q => q,
           qp => qp
         );
-
-   -- Clock process definitions
    clk_process :process
    begin
 		clk <= '0';
@@ -37,9 +33,6 @@ BEGIN
 		clk <= '1';
 		wait for clk_period/2;
    end process;
- 
-
-   -- Stimulus process
    stim_proc: process
    begin		
 	reset<='0';
