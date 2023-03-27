@@ -4,7 +4,6 @@ entity jk_ff_rtl is
     Port ( j,k,clk,reset : in  STD_LOGIC;
            q,qp : out  STD_LOGIC);
 end jk_ff_rtl;
-
 architecture Behavioral of jk_ff_rtl is
 signal t:std_logic:='0';
 begin
